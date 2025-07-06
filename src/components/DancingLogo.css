@@ -1,0 +1,10 @@
+.logo {
+    animation: 2s dance infinite ease-in-out alternate;
+}
+
+@keyframes dance {
+    100% { 
+        -webkit-transform: rotate(55deg); 
+        transform:rotate(5deg); 
+    }
+}
