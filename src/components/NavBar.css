@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  background: linear-gradient(#190b20, #0a0512);
+  background: linear-gradient(#190b20, #0a051210);
   color: white;
   top: 0;
   width: 100%;
@@ -19,7 +19,7 @@
 }
 
 .navbar-links li a {
-  background: linear-gradient(#201134, #120b22);
+  background: linear-gradient(#201134, #120b223c);
   border-radius: 5px;
   color: white;
   padding-left: 60px;
