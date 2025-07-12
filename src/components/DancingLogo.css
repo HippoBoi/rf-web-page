@@ -14,7 +14,7 @@
     }
 }
 
-@media (max-width: 950px) {
+@media (max-width: 1000px) {
     .logo-image {
         width: 105vw;
     }

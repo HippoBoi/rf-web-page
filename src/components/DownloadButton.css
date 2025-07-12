@@ -15,7 +15,7 @@
   border-color: #ff6464;
 }
 
-@media (max-width: 950px) {
+@media (max-width: 1000px) {
   .download-button {
     padding: 0.5em 0.9em;
     font-size: 1.5em;
