@@ -1,0 +1,6 @@
+.characters-background {
+    width: 100vw;
+    height: 100vh;
+    border-radius: 10px;
+    background: linear-gradient(#0a0a0d, rgb(46, 17, 30));
+}
