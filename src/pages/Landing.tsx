@@ -7,7 +7,7 @@ import ramon from "../assets/ramon_icon.png";
 import clean from "../assets/clean_icon.png";
 import shugo from "../assets/shugo_icon.png";
 import DancingLogo from '../components/DancingLogo';
-import Characters from '../components/Characters';
+import CharacterCard from '../components/CharacterCard';
 
 const Landing = () => {
     return (
@@ -20,7 +20,7 @@ const Landing = () => {
             <DownloadButton />
             <div style={{ paddingTop: "5%"}} />
             <BackgroundSlider images={[rhay, ramon, clean, shugo]} />
-            <Characters />
+            <CharacterCard />
         </div>
     );
 }

@@ -3,21 +3,29 @@
         transform: translateX(0%);
     }
     to {
-        transform: translateX(-20%);
+        transform: translateX(-16.70%);
     }
 }
 
 .background-icons {
-    height: 100%;
+    height: 30px;
     padding: 30px;
     overflow: hidden;
     white-space: nowrap;
     position: relative;
 }
 
+.firstRow {
+    filter: blur(5px);
+}
+
+.secondRow {
+    filter: blur(9px);
+}
+
 .background-slide {
     display: inline-block;
     overflow: hidden;
     white-space: nowrap;
-    animation: 7s slide infinite linear;
+    animation: 5s slide infinite linear;
 }
