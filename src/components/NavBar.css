@@ -5,7 +5,7 @@
   background: linear-gradient(#190b20, #0a051210);
   color: white;
   top: 0;
-  width: 100%;
+  width: 100vw;
   height: 120px;
   z-index: 999;
 }
@@ -29,6 +29,7 @@
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s;
+  cursor: pointer;
 }
 
 .navbar-links li a:hover {

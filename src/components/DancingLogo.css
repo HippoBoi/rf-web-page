@@ -1,3 +1,8 @@
+.logo-image {
+    width: 85vw;
+    height: auto;
+}
+
 .logo {
     animation: 2s dance infinite ease-in-out alternate;
 }
@@ -6,5 +11,11 @@
     100% { 
         -webkit-transform: rotate(55deg); 
         transform:rotate(5deg); 
+    }
+}
+
+@media (max-width: 950px) {
+    .logo-image {
+        width: 105vw;
     }
 }
