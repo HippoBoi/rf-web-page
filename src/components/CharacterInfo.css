@@ -1,20 +1,52 @@
+@property --gradient-angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
 .portrait {
+    --clr1: #2e0b1f;
+    --clr2: #4f1664;
+    --clr3: #923434;
+
     position: relative;
-    background: linear-gradient(rgba(58, 25, 41, 0.552), rgba(30, 9, 50, 0.2));
-    width: 30vw;
-    height: clamp(100px, 60vh, 400px);
-    border-color: rgb(252, 180, 237);
-    border-width: 4px;
+    overflow: visible;
+    background: linear-gradient(rgb(58, 25, 41), rgba(14, 7, 20, 0.75));
+    width: 27vw;
+    height: clamp(80px, 58vh, 360px);
     border-radius: 20%;
+    border-color: rgba(252, 154, 205, 0.25);
+    border-width: 4px;
     border-style: solid;
-    left: 10%;
+    left: 15%;
     top: 20%;
     transition: height 0.15s;
 }
 
 .portrait:hover {
-    background: linear-gradient(rgb(58, 25, 41), rgba(30, 9, 50, 0.5));
-    border-color: rgb(255, 130, 169);
+    border-color: rgba(255, 183, 220, 0.55);
+}
+
+.portrait::before,
+.portrait::after {
+    position: absolute;
+    border-radius: inherit;
+    content: "";
+    inset: -0.3rem;
+    background: conic-gradient(
+        from var(--gradient-angle),
+        var(--clr1), 
+        var(--clr2), 
+        var(--clr3),
+        var(--clr2),
+        var(--clr1)
+    );
+    animation: rotation 8s infinite linear;
+    z-index: -1;
+}
+
+.portrait::after {
+    filter: blur(35px);
 }
 
 .splash {
@@ -26,40 +58,83 @@
 .info {
     position: absolute;
     background: transparent;
-    align-items: center;
-    width: 40vw;
-    height: clamp(500px, 80vh, 900px);
+    overflow: visible;
+    width: 42vw;
+    height: 85vh;
     right: 11%;
-    top: 12%;
-
+    top: 18%;
     transition: height 0.15s;
 }
 
 .name {
+    --clr1: #2e0b1f;
+    --clr2: #4f1664;
+    --clr3: #923434;
+
     position: relative;
-    background: transparent;
-    border-color: rgb(252, 180, 237);
-    border-width: 4px;
-    border-style: solid;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    font-size: 50px;
+    background: linear-gradient(rgb(39, 16, 31), rgba(39, 17, 106, 0.5));
+    padding: 10px;
+    font-size: 40px;
 
     transition: height 0.15s;
 }
 
+.name::before,
+.name::after {
+    position: absolute;
+    content: "";
+    inset: -.25rem;
+    background: conic-gradient(
+        from var(--gradient-angle),
+        var(--clr1), 
+        var(--clr2), 
+        var(--clr3),
+        var(--clr2),
+        var(--clr1)
+    );
+    animation: rotation 5s infinite linear;
+    z-index: -1;
+}
+
+.name::after {
+    filter: blur(0.5rem);
+}
+
 .description-container {
+    --clr1: #2e0b1f;
+    --clr2: #4f1664;
+    --clr3: #923434;
+
     position: relative;
-    background: transparent;
+    background: linear-gradient(#240921, #10071d);
     align-content: center;
     height: clamp(150px, 40vh, 300px);
-    border-color: rgb(252, 180, 237);
-    border-width: 4px;
     border-radius: 15%;
-    border-style: solid;
-    padding: 15px;
+    padding: 10px;
 
     transition: height 0.15s;
+}
+
+.description-container::before,
+.description-container::after {
+    position: absolute;
+    content: "";
+    border-radius: inherit;
+    inset: -.25rem;
+    background: conic-gradient(
+        from var(--gradient-angle),
+        var(--clr1), 
+        var(--clr2), 
+        var(--clr3),
+        var(--clr2),
+        var(--clr1)
+    );
+    animation: rotation 8s infinite linear;
+    z-index: -1;
+}
+
+.description-container::after {
+    filter: blur(0.2rem);
 }
 
 .description {
@@ -68,7 +143,7 @@
 
 @media (max-width: 750px) {
     .portrait {
-        height: clamp(150px, 50vh, 360px);
+        height: clamp(150px, 40vh, 360px);
     }
     
     .info {
@@ -90,7 +165,7 @@
     }
 
     .info {
-        height: clamp(50px, 60vh, 400px);
+        height: clamp(50px, 60vh, 420px);
     }
 
     .name {
@@ -100,4 +175,9 @@
     .description {
         font-size: 16px;
     }
+}
+
+@keyframes rotation {
+    0% { --gradient-angle: 0deg; }
+    100% { --gradient-angle: 360deg; }
 }
