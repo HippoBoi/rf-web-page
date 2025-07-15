@@ -1,6 +1,15 @@
-.characters-background {
-    width: 100vw;
+.character-section-container {
+    position: relative;
+    margin-top: 0%;
+    width: 100%;
     height: 100vh;
-    border-radius: 10px;
+    overflow: hidden;
+}
+
+.characters-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
     background: linear-gradient(#0a0a0d, rgb(46, 17, 30));
+    z-index: -1;
 }

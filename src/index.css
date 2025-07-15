@@ -17,6 +17,10 @@ div {
   overflow: hidden;
 }
 
+ul {
+  list-style-type: none;
+}
+
 .parallax {
   overflow: hidden;
   margin: 0;

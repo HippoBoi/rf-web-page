@@ -1,0 +1,103 @@
+.portrait {
+    position: relative;
+    background: linear-gradient(rgba(58, 25, 41, 0.552), rgba(30, 9, 50, 0.2));
+    width: 30vw;
+    height: clamp(100px, 60vh, 400px);
+    border-color: rgb(252, 180, 237);
+    border-width: 4px;
+    border-radius: 20%;
+    border-style: solid;
+    left: 10%;
+    top: 20%;
+    transition: height 0.15s;
+}
+
+.portrait:hover {
+    background: linear-gradient(rgb(58, 25, 41), rgba(30, 9, 50, 0.5));
+    border-color: rgb(255, 130, 169);
+}
+
+.splash {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+
+.info {
+    position: absolute;
+    background: transparent;
+    align-items: center;
+    width: 40vw;
+    height: clamp(500px, 80vh, 900px);
+    right: 11%;
+    top: 12%;
+
+    transition: height 0.15s;
+}
+
+.name {
+    position: relative;
+    background: transparent;
+    border-color: rgb(252, 180, 237);
+    border-width: 4px;
+    border-style: solid;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 50px;
+
+    transition: height 0.15s;
+}
+
+.description-container {
+    position: relative;
+    background: transparent;
+    align-content: center;
+    height: clamp(150px, 40vh, 300px);
+    border-color: rgb(252, 180, 237);
+    border-width: 4px;
+    border-radius: 15%;
+    border-style: solid;
+    padding: 15px;
+
+    transition: height 0.15s;
+}
+
+.description {
+    font-size: 26px;
+}
+
+@media (max-width: 750px) {
+    .portrait {
+        height: clamp(150px, 50vh, 360px);
+    }
+    
+    .info {
+        height: clamp(100px, 70vh, 450px);
+    }
+
+    .name {
+        font-size: 30px;
+    }
+
+    .description {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 400px) {
+    .portrait {
+        height: clamp(150px, 30vh, 200px);
+    }
+
+    .info {
+        height: clamp(50px, 60vh, 400px);
+    }
+
+    .name {
+        font-size: 20px;
+    }
+
+    .description {
+        font-size: 16px;
+    }
+}
