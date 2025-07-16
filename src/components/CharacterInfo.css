@@ -153,6 +153,29 @@
 .star {
     width: 10%;
     height: 10%;
+    box-sizing: content-box;
+    box-shadow: 0 0 0px 0px yellow;
+
+    transition: width 0.5s, height 0.5s;
+    animation: star-rotation 4s infinite ease-in-out;
+}
+
+.star:hover {
+    width: 12%;
+    height: 12%;
+    box-shadow: 0 0 2px 2px yellow;
+}
+
+@keyframes star-rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(-5deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 @media (max-width: 750px) {
