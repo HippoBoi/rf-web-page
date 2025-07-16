@@ -158,7 +158,6 @@
     box-shadow: 0 0 0px 0px yellow;
 
     transition: width 0.5s, height 0.5s;
-    animation: star-rotation 5s infinite ease-in-out;
 }
 
 .star:hover {

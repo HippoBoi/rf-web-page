@@ -1,0 +1,35 @@
+.carousel {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 35vw;
+    height: auto;
+    left: 9vw;
+    top: 25vh;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2.5em;
+}
+
+.character {
+    background-color: rgba(0, 0, 0, 0.347);
+    width: 4vw;
+    height: 8vh;
+}
+
+.character-icon {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+@media (max-width: 750px) {
+    .carousel {
+        gap: 0.5em;
+    }
+
+    .character {
+        width: 10vw;
+        height: 7vh
+    }
+}
