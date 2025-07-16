@@ -8,7 +8,7 @@ const CharacterSection = () => {
         <div className="characters-background"></div>
           <CharacterInfo 
             name="RHAY" 
-            desc="Difficulty: ****" 
+            health={5}
             splash={rhay} />
     </div>
   )

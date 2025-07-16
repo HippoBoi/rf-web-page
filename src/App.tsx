@@ -4,13 +4,13 @@ import VideoComponent from './components/VideoComponent'
 import Landing from './pages/Landing'
 
 function App() {
-  return (
-    <div>
-      <VideoComponent />
-      <NavBar />
-      <Landing />
-    </div>
-  )
+    return (
+        <div>
+            <VideoComponent />
+            <NavBar />
+            <Landing />
+        </div>
+    )
 }
 
 export default App
