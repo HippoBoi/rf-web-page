@@ -11,7 +11,7 @@ interface Props {
     specialStatValue?: number;
 }
 
-const CharacterInfo = (props: Props) => {
+const CharacterInfo = ({ name, splash, health, damage, difficulty, specialStat, specialStatValue }: Props) => {
     const addStars = (amount: number) => {
         return Array.from({ length: amount }).map(() => {
             return <img className="star" src={star}></img>
@@ -23,26 +23,34 @@ const CharacterInfo = (props: Props) => {
             <div className="portrait">
                 <img 
                     className="splash" 
-                    src={props.splash} >
+                    src={splash} >
                 </img>
             </div>
             
             <div className="info">
-                <h1 className="name">{props.name}</h1>
+                <h1 className="name">{name}</h1>
                 <ul className="description-container">
                     <li>
                         <div className="stat-row">
                             <h3 className="description">Health:</h3>
-                            {addStars(4)}
+                            {addStars(health!)}
                         </div>
                         <div className="stat-row">
                             <h3 className="description">Damage:</h3>
-                            {addStars(4)}
+                            {addStars(damage!)}
                         </div>
                         <div className="stat-row">
                             <h3 className="description">Difficulty:</h3>
-                            {addStars(2)}
+                            {addStars(difficulty!)}
                         </div>
+
+                        {specialStat && (
+                            <div className="stat-row">
+                                <h3 className="description">{specialStat}:</h3>
+                                {addStars(specialStatValue!)}
+                            </div>
+                        )}
+                        
                     </li>
                 </ul>
             </div>

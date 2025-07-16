@@ -109,9 +109,9 @@
     background: linear-gradient(#240921, #10071d);
     align-content: center;
     width: 40vw;
-    height: 42vh;
+    height: 45vh;
     border-radius: 10%;
-    padding: 10px;
+    padding: 15px;
     top: 5%;
 
     transition: height 0.15s;
@@ -141,28 +141,29 @@
 
 .description {
     font-size: 24px;
+    white-space: nowrap;
 }
 
 .stat-row {
     display: flex;
     align-items: center;
-    gap: 2em;
+    gap: 2vw;
     overflow: visible;
 }
 
 .star {
-    width: 10%;
-    height: 10%;
+    width: 9.5%;
+    height: 9.5%;
     box-sizing: content-box;
     box-shadow: 0 0 0px 0px yellow;
 
     transition: width 0.5s, height 0.5s;
-    animation: star-rotation 4s infinite ease-in-out;
+    animation: star-rotation 5s infinite ease-in-out;
 }
 
 .star:hover {
-    width: 12%;
-    height: 12%;
+    width: 11%;
+    height: 11%;
     box-shadow: 0 0 2px 2px yellow;
 }
 
@@ -170,8 +171,8 @@
     0% {
         transform: rotate(0deg);
     }
-    50% {
-        transform: rotate(-5deg);
+    70% {
+        transform: rotate(-9deg);
     }
     100% {
         transform: rotate(360deg);
@@ -187,12 +188,16 @@
         height: clamp(100px, 70vh, 450px);
     }
 
+    .description-container {
+        height: 40vh;
+    }
+
     .name {
         font-size: 30px;
     }
 
     .description {
-        font-size: 20px;
+        font-size: 16px;
     }
 }
 
@@ -202,7 +207,11 @@
     }
 
     .info {
-        height: clamp(50px, 60vh, 420px);
+        height: clamp(50px, 30vh, 350px);
+    }
+
+    .description-container {
+        height: 30vh;
     }
 
     .name {
@@ -210,7 +219,7 @@
     }
 
     .description {
-        font-size: 16px;
+        font-size: 12px;
     }
 }
 
