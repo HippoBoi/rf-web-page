@@ -5,7 +5,7 @@ import CharacterCarousel from "./CharacterCarousel";
 import characters from "./CharactersData";
 
 const CharacterSection = () => {
-  const [charIndex, setCharIndex] = useState(0);
+  const [charIndex, setCharIndex] = useState(1);
 
   return (
     <div className="character-section-container">
