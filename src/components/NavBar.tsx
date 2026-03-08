@@ -14,7 +14,6 @@ const NavBar = () => {
         <nav className="navbar" role="navigation" aria-label="Main">
             <div className="brand" onClick={() => scrollTo(0)} tabIndex={0} role="button" aria-label="Home">
                 <img src={logo} alt="Random Fighters" className="brand-logo" />
-                <span className="brand-name">Random Fighters</span>
             </div>
 
             <button

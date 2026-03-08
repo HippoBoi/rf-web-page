@@ -37,7 +37,6 @@
   height: 44px;
   width: auto;
   border-radius: 8px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.45);
 }
 
 .brand-name {
@@ -82,18 +81,13 @@
 }
 
 .nav-cta {
-  background: linear-gradient(90deg, #6f668e 0%, #352973 100%);
+  background: linear-gradient(90deg, #7a8cff 0%, #2b204f 100%);
   color: white;
-  box-shadow: 0 8px 24px rgba(255,75,110,0.12);
 }.nav-cta:hover { background: linear-gradient(90deg, #5841ac 0%, #161759 100%); }
 
-/* Mobile */
 @media (max-width: 860px) {
   .hamburger { display: block; }
   .nav-links { position: absolute; top: 64px; right: 12px; flex-direction: column; background: rgba(12,12,15,0.85); padding: 0.5rem; gap: 0.25rem; border-radius: 12px; display: none; min-width: 160px; }
   .nav-links.open { display: flex; }
   .nav-link, .nav-cta { width: 100%; text-align: left; }
 }
-
-/* focus states */
-.nav-link:focus, .nav-cta:focus, .hamburger:focus, .brand:focus { outline: 3px solid rgba(255,100,100,0.12); outline-offset: 3px; }
