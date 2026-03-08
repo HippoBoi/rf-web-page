@@ -1,21 +1,23 @@
 .logo-image {
-    width: 85vw;
+    width: 100%;
+    max-width: 420px;
     height: auto;
+    display: block;
+    border-radius: 12px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.6);
 }
 
 .logo {
-    animation: 2s dance infinite ease-in-out alternate;
+    animation: float 5s ease-in-out infinite;
+    transform-origin: center;
 }
 
-@keyframes dance {
-    100% { 
-        -webkit-transform: rotate(55deg); 
-        transform:rotate(5deg); 
-    }
+@keyframes float {
+    0% { transform: translateY(0) rotate(-1deg); }
+    50% { transform: translateY(-10px) rotate(1deg); }
+    100% { transform: translateY(0) rotate(-1deg); }
 }
 
 @media (max-width: 1000px) {
-    .logo-image {
-        width: 105vw;
-    }
+    .logo-image { max-width: 320px; }
 }

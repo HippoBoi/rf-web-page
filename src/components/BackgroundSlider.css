@@ -8,24 +8,25 @@
 }
 
 .background-icons {
-    height: 30px;
-    padding: 30px;
+    height: 34px;
+    padding: 22px;
     overflow: hidden;
     white-space: nowrap;
     position: relative;
+    opacity: 0.45;
 }
 
 .firstRow {
-    filter: blur(5px);
+    filter: blur(4px);
 }
 
 .secondRow {
-    filter: blur(9px);
+    filter: blur(6px);
 }
 
 .background-slide {
     display: inline-block;
     overflow: hidden;
     white-space: nowrap;
-    animation: 5s slide infinite linear;
+    animation: 12s slide infinite linear;
 }

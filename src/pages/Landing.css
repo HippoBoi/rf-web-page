@@ -1,0 +1,91 @@
+/* Modern hero styles for Landing page */
+.landing-hero {
+  width: 100%;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, rgba(16,12,22,0.8) 0%, rgba(8,6,12,0.85) 100%);
+  padding: 4rem 1rem;
+}
+
+.hero-inner {
+  max-width: 1100px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 460px;
+  gap: 2rem;
+  align-items: center;
+}
+
+.hero-copy {
+  color: var(--muted);
+}
+
+.hero-title {
+  font-size: 3rem;
+  line-height: 1.02;
+  font-weight: 800;
+  color: white;
+  margin: 0 0 0.6rem 0;
+  letter-spacing: -0.02em;
+}
+
+.hero-subtitle {
+  margin: 0 0 1.25rem 0;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.cta-row {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.hero-art {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Entrance animations for hero elements */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes art-pop {
+  from { opacity: 0; transform: scale(0.96) translateY(6px); }
+  to   { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.hero-title, .hero-subtitle, .cta-row {
+  opacity: 0;
+  transform: translateY(12px);
+  animation: fadeUp 700ms cubic-bezier(.2,.9,.2,1) both;
+}
+
+.hero-title { animation-delay: 180ms; }
+.hero-subtitle { animation-delay: 340ms; }
+.cta-row { animation-delay: 520ms; }
+
+.hero-art {
+  opacity: 0;
+  transform: scale(0.96);
+  animation: art-pop 900ms cubic-bezier(.2,.9,.2,1) both;
+  animation-delay: 300ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-title, .hero-subtitle, .cta-row, .hero-art { animation: none !important; transform: none !important; opacity: 1 !important; }
+}
+
+@media (max-width: 900px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .hero-art { order: -1; }
+  .hero-title { font-size: 2.2rem; }
+}
