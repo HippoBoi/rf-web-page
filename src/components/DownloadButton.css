@@ -5,14 +5,13 @@
   font-size: 1.05rem;
   font-weight: 700;
   font-family: inherit;
-  background: linear-gradient(90deg, #7a8cff 0%, #2b204f 100%);
+  background: linear-gradient(90deg, #5555b1 0%, #131a5b 100%);
   cursor: pointer;
   transition: transform 0.15s ease, box-shadow 0.15s ease;
-  transition: background 0.3s ease;
 }
 
 .download-button:hover {
-  background: linear-gradient(90deg, #5841ac 0%, #161759 100%);
+  background: linear-gradient(90deg, rgb(73, 66, 154) 0%, #0e144a 100%);
 }
 
 @media (max-width: 1000px) {
@@ -20,6 +19,6 @@
     padding: 0.5em 0.9em;
     font-size: 0.95rem;
     font-weight: 700;
-    box-shadow: 0 8px 24px rgba(255,75,110,0.12);
+    box-shadow: 0 8px 24px rgba(47,160,255,0.12);
   }
 }

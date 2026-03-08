@@ -5,17 +5,15 @@
 }
 
 .portrait {
-    --clr1: #2e0b1f;
-    --clr2: #4f1664;
-    --clr3: #923434;
+    /* palette comes from global CSS variables: --color-primary/secondary/accent */
 
     position: relative;
     overflow: visible;
-    background: linear-gradient(rgb(58, 25, 41), rgba(14, 7, 20, 0.75));
+    background: linear-gradient(rgb(8, 20, 32), rgba(8, 28, 50, 0.75));
     width: 27vw;
     height: clamp(80px, 58vh, 360px);
     border-radius: 20%;
-    border-color: rgba(252, 154, 205, 0.25);
+    border-color: color-mix(in srgb, var(--color-accent, #6fc6ff) 40%, black 60%);
     border-width: 4px;
     border-style: solid;
     left: 14%;
@@ -24,7 +22,7 @@
 }
 
 .portrait:hover {
-    border-color: rgba(255, 183, 220, 0.55);
+    border-color: rgba(111,210,255,0.5);
 }
 
 .portrait::before,
@@ -35,11 +33,11 @@
     inset: -0.3rem;
     background: conic-gradient(
         from var(--gradient-angle),
-        var(--clr1), 
-        var(--clr2), 
-        var(--clr3),
-        var(--clr2),
-        var(--clr1)
+        var(--color-primary),
+        var(--color-secondary),
+        var(--color-accent),
+        var(--color-secondary),
+        var(--color-primary)
     );
     animation: rotation 8s infinite linear;
     z-index: -1;
@@ -71,12 +69,8 @@
 }
 
 .name {
-    --clr1: #2e0b1f;
-    --clr2: #4f1664;
-    --clr3: #923434;
-
     position: relative;
-    background: linear-gradient(rgb(39, 16, 31), rgba(39, 17, 106, 0.5));
+    background: linear-gradient(rgb(8, 20, 32), color-mix(in srgb, var(#071126) 60%, black 20%));
     padding: 20px;
     font-size: 40px;
 
@@ -90,11 +84,11 @@
     inset: -.25rem;
     background: conic-gradient(
         from var(--gradient-angle),
-        var(--clr1), 
-        var(--clr2), 
-        var(--clr3),
-        var(--clr2),
-        var(--clr1)
+        var(--color-primary),
+        var(--color-secondary),
+        var(--color-accent),
+        var(--color-secondary),
+        var(--color-primary)
     );
     animation: rotation 5s infinite linear;
     z-index: -1;
@@ -105,12 +99,8 @@
 }
 
 .description-container {
-    --clr1: #2e0b1f;
-    --clr2: #4f1664;
-    --clr3: #923434;
-
     position: relative;
-    background: linear-gradient(#240921, #10071d);
+    background: linear-gradient(var(--color-primary, #071126), color-mix(in srgb, var(--color-primary, #071126) 40%, black 10%));
     align-content: center;
     width: 40vw;
     height: 45vh;

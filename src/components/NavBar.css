@@ -9,12 +9,12 @@
   justify-content: space-between;
   padding: 0 1rem 0 1.25rem;
   gap: 1rem;
-  background: rgba(8,8,12,0.5);
+  background: color-mix(in srgb, var(--color-secondary, #071126) 18%, black 82%);
   backdrop-filter: blur(8px) saturate(1.1);
-  color: white;
+  color: var(--muted);
   z-index: 1000;
-  box-shadow: 0 6px 24px rgba(0,0,0,0.5);
   animation: nav-enter 600ms cubic-bezier(.2,.5,.2,1) both;
+  transition: background 300ms ease, color 300ms ease, box-shadow 300ms ease;
 }
 
 @keyframes nav-enter {
@@ -42,7 +42,7 @@
 .brand-name {
   font-weight: 700;
   letter-spacing: -0.02em;
-  color: white;
+  color: var(--muted);
 }
 
 .hamburger {
@@ -81,13 +81,15 @@
 }
 
 .nav-cta {
-  background: linear-gradient(90deg, #7a8cff 0%, #2b204f 100%);
-  color: white;
-}.nav-cta:hover { background: linear-gradient(90deg, #5841ac 0%, #161759 100%); }
+  background: linear-gradient(90deg, var(--color-accent, #7a8cff) 0%, color-mix(in srgb, var(--color-secondary, #2b204f) 80%, black 20%) 100%);
+  color: var(--muted);
+  transition: background 250ms ease, color 250ms ease;
+}
+.nav-cta:hover { background: linear-gradient(90deg, color-mix(in srgb, var(--color-accent, #6ab0ff) 85%, black 15%), color-mix(in srgb, var(--color-secondary, #161759) 85%, black 15%)); }
 
 @media (max-width: 860px) {
   .hamburger { display: block; }
-  .nav-links { position: absolute; top: 64px; right: 12px; flex-direction: column; background: rgba(12,12,15,0.85); padding: 0.5rem; gap: 0.25rem; border-radius: 12px; display: none; min-width: 160px; }
+  .nav-links { position: absolute; top: 64px; right: 12px; flex-direction: column; background: color-mix(in srgb, var(--color-primary, #071126) 85%, black 15%); padding: 0.5rem; gap: 0.25rem; border-radius: 12px; display: none; min-width: 160px; transition: background 250ms ease; }
   .nav-links.open { display: flex; }
   .nav-link, .nav-cta { width: 100%; text-align: left; }
 }

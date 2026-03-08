@@ -1,11 +1,41 @@
 import "./CharacterSection.css";
 import CharacterInfo from "./CharacterInfo";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import CharacterCarousel from "./CharacterCarousel";
 import characters from "./CharactersData";
+import { applyPalette, loadSavedPalette } from "../utils/palette";
 
 const CharacterSection = () => {
-  const [charIndex, setCharIndex] = useState(1);
+  const [charIndex, setCharIndex] = useState(() => {
+    try {
+      const raw = localStorage.getItem("rf:selectedCharIndex");
+      return raw ? Number(raw) : 1;
+    } catch (e) { 
+      console.error(e);
+      return 1; 
+    }
+  });
+
+  useEffect(() => {
+    const saved = loadSavedPalette();
+
+    if (saved) {
+      applyPalette(saved, false);
+    }
+    else {
+      applyPalette(characters[charIndex].palette);
+    }
+  });
+
+  useEffect(() => {
+    applyPalette(characters[charIndex].palette);
+    try { 
+      localStorage.setItem("rf:selectedCharIndex", String(charIndex)); 
+    } 
+    catch(e) { 
+      console.log(e);
+    }
+  }, [charIndex]);
 
   return (
     <div className="character-section-container">
