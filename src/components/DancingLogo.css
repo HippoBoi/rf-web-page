@@ -1,10 +1,21 @@
 .logo-image {
+    margin-top: 120px;
     width: 100%;
-    max-width: 420px;
+    max-width: 860px;
     height: auto;
-    display: block;
-    border-radius: 12px;
-    box-shadow: 0 12px 30px rgba(0,0,0,0.6);
+    animation: intro 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+}
+
+@keyframes intro {
+    0% {
+        transform: rotate(-180deg);
+        opacity: 0;
+    }
+
+    100% {
+        transform: rotate(0deg);
+        opacity: 1;
+    }
 }
 
 .logo {

@@ -14,7 +14,7 @@
   color: white;
   z-index: 1000;
   box-shadow: 0 6px 24px rgba(0,0,0,0.5);
-  animation: nav-enter 600ms cubic-bezier(.2,.9,.2,1) both;
+  animation: nav-enter 600ms cubic-bezier(.2,.5,.2,1) both;
 }
 
 @keyframes nav-enter {
@@ -82,12 +82,10 @@
 }
 
 .nav-cta {
-  background: linear-gradient(90deg, #ff7a7a 0%, #ff4b6e 100%);
+  background: linear-gradient(90deg, #6f668e 0%, #352973 100%);
   color: white;
   box-shadow: 0 8px 24px rgba(255,75,110,0.12);
-}
-
-.nav-cta:hover { transform: translateY(-2px); }
+}.nav-cta:hover { background: linear-gradient(90deg, #5841ac 0%, #161759 100%); }
 
 /* Mobile */
 @media (max-width: 860px) {

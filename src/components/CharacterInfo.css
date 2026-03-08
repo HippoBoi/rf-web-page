@@ -52,9 +52,9 @@
 .splash {
     position: absolute;
     object-fit: contain;
-    left: -5vw;
-    top: -7vh;
-    width: 135%;
+    left: -17vw;
+    top: -12vh;
+    width: 235%;
     height: 125%;
     z-index: 2;
 }

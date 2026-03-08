@@ -5,15 +5,11 @@
   font-size: 1.05rem;
   font-weight: 700;
   font-family: inherit;
-  background: linear-gradient(90deg, #ff7a7a 0%, #ff4b6e 100%);
+  background: linear-gradient(90deg, #7a8cff 0%, #ff4b6e 100%);
   color: white;
   cursor: pointer;
   transition: transform 0.15s ease, box-shadow 0.15s ease;
   box-shadow: 0 8px 24px rgba(255,75,110,0.12);
-}
-.download-button:hover {
-  transform: translateY(-3px) scale(1.02);
-  box-shadow: 0 18px 40px rgba(255,75,110,0.18);
 }
 
 @media (max-width: 1000px) {
