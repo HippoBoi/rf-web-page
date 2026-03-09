@@ -5,13 +5,13 @@
   font-size: 1.05rem;
   font-weight: 700;
   font-family: inherit;
-  background: linear-gradient(90deg, #5555b1 0%, #131a5b 100%);
+  background: linear-gradient(90deg, #d66c79 0%, #8e2741 100%);
   cursor: pointer;
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
 .download-button:hover {
-  background: linear-gradient(90deg, rgb(73, 66, 154) 0%, #0e144a 100%);
+  background: linear-gradient(90deg, #bb4c59 0%, #6e1727 100%);
 }
 
 @media (max-width: 1000px) {
