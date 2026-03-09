@@ -59,7 +59,7 @@ const characters = [
         name: "Nephi",
         icon: nephiIcon,
         splash: nephi,
-        palette: { primary: "#07132a", secondary: "#115c92", accent: "#7fe0ff", "bg-color": "#07132a" },
+        palette: { primary: "#010f01", secondary: "#1f6e39", accent: "#48de43", "bg-color": "#010f01" },
         health: 5,
         damage: 1,
         difficulty: 2,
