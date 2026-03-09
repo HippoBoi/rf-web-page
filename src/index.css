@@ -1,3 +1,51 @@
+@property --color-primary {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: #071126;
+}
+
+@property --color-secondary {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: #0d4a78;
+}
+
+@property --color-accent {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: #6fc6ff;
+}
+
+@property --bg {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: #071126;
+}
+
+@property --bg-secondary {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: #0d4a78;
+}
+
+@property --clr1 {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: #071126;
+}
+
+@property --clr2 {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: #0d4a78;
+}
+
+@property --clr3 {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: #6fc6ff;
+}
+
 :root {
   --bg: #071126;
   --muted: rgba(200,220,255,0.9);
@@ -5,6 +53,15 @@
   --color-secondary: #0d4a78;
   --color-accent: #6fc6ff;
   --glass: rgba(111,198,255,0.06);
+  transition:
+    --color-primary 600ms ease,
+    --color-secondary 600ms ease,
+    --color-accent 600ms ease,
+    --bg 600ms ease,
+    --bg-secondary 600ms ease,
+    --clr1 600ms ease,
+    --clr2 600ms ease,
+    --clr3 600ms ease;
   font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
