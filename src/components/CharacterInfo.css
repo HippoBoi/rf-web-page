@@ -22,7 +22,7 @@
 }
 
 .portrait:hover {
-    border-color: rgba(111,210,255,0.5);
+    border-color: color-mix(in srgb, var(--color-accent, #6fc6ff) 55%, black 45%);
 }
 
 .portrait::before,
@@ -70,7 +70,7 @@
 
 .name {
     position: relative;
-    background: linear-gradient(rgb(8, 20, 32), color-mix(in srgb, var(#071126) 60%, black 20%));
+    background: linear-gradient(var(--color-primary, rgb(39,16,31)), color-mix(in srgb, var(--color-secondary, rgba(39,17,106,0.5)) 50%, black 10%));
     padding: 20px;
     font-size: 40px;
 
@@ -119,11 +119,11 @@
     inset: -.25rem;
     background: conic-gradient(
         from var(--gradient-angle),
-        var(--clr1), 
-        var(--clr2), 
-        var(--clr3),
-        var(--clr2),
-        var(--clr1)
+        var(--color-primary),
+        var(--color-secondary),
+        var(--color-accent),
+        var(--color-secondary),
+        var(--color-primary)
     );
     animation: rotation 8s infinite linear;
     z-index: -1;
@@ -152,12 +152,6 @@
     box-shadow: 0 0 0px 0px yellow;
 
     transition: width 0.5s, height 0.5s;
-}
-
-.star:hover {
-    width: 11%;
-    height: 11%;
-    box-shadow: 0 0 2px 2px yellow;
 }
 
 @keyframes star-rotation {
