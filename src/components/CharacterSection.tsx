@@ -9,10 +9,10 @@ const CharacterSection = () => {
   const [charIndex, setCharIndex] = useState(() => {
     try {
       const raw = localStorage.getItem("rf:selectedCharIndex");
-      return raw ? Number(raw) : 1;
+      return raw ? Number(raw) : 0; // default to Rhay (index 0)
     } catch (e) { 
       console.error(e);
-      return 1; 
+      return 0; 
     }
   });
 
@@ -21,11 +21,12 @@ const CharacterSection = () => {
 
     if (saved) {
       applyPalette(saved, false);
-    }
-    else {
+    } else {
       applyPalette(characters[charIndex].palette);
     }
-  });
+    // run once on mount
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   useEffect(() => {
     applyPalette(characters[charIndex].palette);

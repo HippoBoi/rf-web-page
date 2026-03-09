@@ -8,6 +8,7 @@ import clean from "../assets/clean_icon.png";
 import shugo from "../assets/shugo_icon.png";
 import DancingLogo from '../components/DancingLogo';
 import CharacterSection from '../components/CharacterSection';
+import AboutSection from '../components/AboutSection';
 
 const Landing = () => {
     return (
@@ -21,6 +22,7 @@ const Landing = () => {
             <div style={{ paddingTop: "5%"}} />
             <BackgroundSlider images={[rhay, ramon, clean, shugo]} />
             <CharacterSection />
+            <AboutSection />
         </div>
     );
 }

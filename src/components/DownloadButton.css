@@ -1,8 +1,8 @@
 .download-button {
   border-radius: 999px;
   border: 0;
-  padding: 0.65em 1.25em;
-  font-size: 1.05rem;
+  padding: 1.0em 2.75em;
+  font-size: 1.25rem;
   font-weight: 700;
   font-family: inherit;
   background: linear-gradient(90deg, #d66c79 0%, #8e2741 100%);
