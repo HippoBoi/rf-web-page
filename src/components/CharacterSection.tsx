@@ -9,7 +9,7 @@ const CharacterSection = () => {
   const [charIndex, setCharIndex] = useState(() => {
     try {
       const raw = localStorage.getItem("rf:selectedCharIndex");
-      return raw ? Number(raw) : 0; // default to Rhay (index 0)
+      return raw ? Number(raw) : 0;
     } catch (e) { 
       console.error(e);
       return 0; 
@@ -24,8 +24,6 @@ const CharacterSection = () => {
     } else {
       applyPalette(characters[charIndex].palette);
     }
-    // run once on mount
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
@@ -39,7 +37,7 @@ const CharacterSection = () => {
   }, [charIndex]);
 
   return (
-    <div className="character-section-container">
+    <div id="characters" className="character-section-container">
         <div className="characters-background"></div>
           <CharacterInfo 
             name={characters[charIndex].name} 

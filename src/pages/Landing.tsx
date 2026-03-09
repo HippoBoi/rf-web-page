@@ -9,6 +9,7 @@ import shugo from "../assets/shugo_icon.png";
 import DancingLogo from '../components/DancingLogo';
 import CharacterSection from '../components/CharacterSection';
 import AboutSection from '../components/AboutSection';
+import ContactSection from '../components/ContactSection';
 
 const Landing = () => {
     return (
@@ -19,10 +20,11 @@ const Landing = () => {
         }}>
             <DancingLogo logo={logo} />
             <DownloadButton />
-            <div style={{ paddingTop: "5%"}} />
+            <div style={{ paddingTop: "7%"}} />
             <BackgroundSlider images={[rhay, ramon, clean, shugo]} />
             <CharacterSection />
             <AboutSection />
+            <ContactSection />
         </div>
     );
 }

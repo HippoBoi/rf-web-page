@@ -5,14 +5,18 @@ import logo from "../assets/logo.webp";
 const NavBar = () => {
     const [open, setOpen] = useState(false);
 
-    const scrollTo = (position: number = 0) => {
-        window.scrollTo({ top: position, behavior: "smooth" });
+    const scrollTo = (sectionId?: string) => {
+        if (sectionId) {
+            document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" });
+        } else {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }
         setOpen(false);
     };
 
     return (
         <nav className="navbar" role="navigation" aria-label="Main">
-            <div className="brand" onClick={() => scrollTo(0)} tabIndex={0} role="button" aria-label="Home">
+            <div className="brand" onClick={() => {}} tabIndex={0} role="button" aria-label="Home">
                 <img src={logo} alt="Random Fighters" className="brand-logo" />
             </div>
 
@@ -32,13 +36,13 @@ const NavBar = () => {
                     <button className="nav-cta" onClick={() => { scrollTo(); window.open("https://drive.google.com/file/d/1cSDwtxD3N1H52UGJQZNoXB8hFx3Q9X6t/view?usp=sharing"); }}>Download</button>
                 </li>
                 <li>
-                    <button className="nav-link" onClick={() => scrollTo(760)}>Characters</button>
+                    <button className="nav-link" onClick={() => scrollTo('characters')}>Characters</button>
                 </li>
                 <li>
-                    <button className="nav-link" onClick={() => scrollTo(1200)}>About</button>
+                    <button className="nav-link" onClick={() => scrollTo('about')}>About</button>
                 </li>
                 <li>
-                    <button className="nav-link" onClick={() => scrollTo(2400)}>Contact</button>
+                    <button className="nav-link" onClick={() => scrollTo('contact')}>Contact</button>
                 </li>
             </ul>
         </nav>
