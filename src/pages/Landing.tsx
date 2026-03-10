@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import logo from '../assets/logo.webp'
 import BackgroundSlider from '../components/BackgroundSlider';
 import DownloadButton from '../components/DownloadButton';
@@ -10,8 +11,16 @@ import DancingLogo from '../components/DancingLogo';
 import CharacterSection from '../components/CharacterSection';
 import AboutSection from '../components/AboutSection';
 import ContactSection from '../components/ContactSection';
+import characters from '../components/CharactersData';
 
 const Landing = () => {
+    useEffect(() => {
+        characters.forEach(char => {
+            const img = new Image();
+            img.src = char.splash;
+        });
+    }, []);
+
     return (
         <div style={{
             display: "flex",

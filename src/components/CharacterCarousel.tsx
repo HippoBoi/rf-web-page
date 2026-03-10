@@ -10,6 +10,7 @@ const CharacterCarousel = ({ onClick }: Props) => {
         <div className="carousel">
             { characters.map((char, index) => (
                 <button 
+                    key={index}
                     className="character"
                     onClick={() => onClick(index)}>
                         <img className="character-icon" src={char.icon}></img>

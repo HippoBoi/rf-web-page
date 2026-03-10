@@ -1,11 +1,11 @@
 .carousel {
-    position: relative;
+    position: absolute;
     display: flex;
     flex-wrap: wrap;
     width: 35vw;
     height: auto;
     left: 9vw;
-    top: 25vh;
+    bottom: 8vh;
     align-items: center;
     justify-content: space-between;
     gap: 2.5em;
