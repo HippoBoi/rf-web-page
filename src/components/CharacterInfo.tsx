@@ -2,6 +2,7 @@ import "./CharacterInfo.css";
 import star from "../assets/star_icon.webp";
 
 interface Props {
+    animClass?: string;
     name: string;
     splash: string;
     health?: number;
@@ -11,15 +12,15 @@ interface Props {
     specialStatValue?: number;
 }
 
-const CharacterInfo = ({ name, splash, health, damage, difficulty, specialStat, specialStatValue }: Props) => {
+const CharacterInfo = ({ animClass, name, splash, health, damage, difficulty, specialStat, specialStatValue }: Props) => {
     const addStars = (amount: number) => {
-        return Array.from({ length: amount }).map(() => {
-            return <img className="star" src={star}></img>
+        return Array.from({ length: amount }).map((_, i) => {
+            return <img key={i} className="star" src={star} alt="" aria-hidden="true"></img>
         })
     }
 
     return (
-        <>
+        <div className={`char-content ${animClass ?? ''}`}>
             <div className="portrait">
                 <img 
                     className="splash" 
@@ -54,7 +55,7 @@ const CharacterInfo = ({ name, splash, health, damage, difficulty, specialStat, 
                     </li>
                 </ul>
             </div>
-        </>
+        </div>
     )
 }
 
