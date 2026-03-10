@@ -4,11 +4,7 @@
   padding: 7rem 1.5rem;
   overflow: hidden;
   scroll-margin-top: 64px;
-  background: linear-gradient(
-    180deg,
-    var(--color-secondary, #0d4a78) 0%,
-    var(--color-secondary, #071126) 60%
-  );
+  background: var(--color-secondary, #0d4a78) 60%
 }
 
 .about-inner {

@@ -15,7 +15,7 @@ interface Props {
 const CharacterInfo = ({ animClass, name, splash, health, damage, difficulty, specialStat, specialStatValue }: Props) => {
     const addStars = (amount: number) => {
         return Array.from({ length: amount }).map((_, i) => {
-            return <img key={i} className="star" src={star}></img>
+            return <img key={i} className="star" src={star} alt="" aria-hidden="true"></img>
         })
     }
 

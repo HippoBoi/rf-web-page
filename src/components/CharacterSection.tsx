@@ -11,14 +11,26 @@ const CharacterSection = () => {
   const [displayedIndex, setDisplayedIndex] = useState(() => {
     try {
       const raw = localStorage.getItem("rf:selectedCharIndex");
-      return raw ? Number(raw) : 0;
+      const parsed = raw ? Number(raw) : NaN;
+      if (!Number.isInteger(parsed) || parsed < 0 || parsed >= characters.length) return 0;
+      return parsed;
     } catch (e) {
       console.error(e);
       return 0;
     }
   });
+
   const [exitingIndex, setExitingIndex] = useState<number | null>(null);
   const isTransitioningRef = useRef(false);
+  const transitionTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  useEffect(() => {
+    return () => {
+      if (transitionTimeoutRef.current !== null) {
+        clearTimeout(transitionTimeoutRef.current);
+      }
+    };
+  }, []);
 
   useEffect(() => {
     const saved = loadSavedPalette();
@@ -27,7 +39,7 @@ const CharacterSection = () => {
     } else {
       applyPalette(characters[displayedIndex].palette);
     }
-  });
+  }, [displayedIndex]);
 
   useEffect(() => {
     applyPalette(characters[displayedIndex].palette);
@@ -43,9 +55,10 @@ const CharacterSection = () => {
     isTransitioningRef.current = true;
     setExitingIndex(displayedIndex);
     setDisplayedIndex(index);
-    setTimeout(() => {
+    transitionTimeoutRef.current = setTimeout(() => {
       setExitingIndex(null);
       isTransitioningRef.current = false;
+      transitionTimeoutRef.current = null;
     }, ANIM_DURATION);
   };
 
