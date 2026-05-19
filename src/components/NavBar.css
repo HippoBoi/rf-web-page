@@ -9,7 +9,7 @@
   justify-content: space-between;
   padding: 0 1rem 0 1.25rem;
   gap: 1rem;
-  background: color-mix(in srgb, color-mix(in srgb, var(--color-secondary, #071126) 18%, black 82%) 35%, transparent);
+  background: color-mix(in srgb, color-mix(in srgb, var(--color-secondary, #071126) 18%, black 82%) 95%, transparent);
   backdrop-filter: blur(8px) saturate(1.1);
   color: var(--muted);
   z-index: 1000;
@@ -79,13 +79,6 @@
   color: white;
   background: var(--glass);
 }
-
-.nav-cta {
-  background: linear-gradient(90deg, var(--color-accent, #7a8cff) 0%, color-mix(in srgb, var(--color-secondary, #2b204f) 80%, black 20%) 100%);
-  color: var(--muted);
-  transition: background 250ms ease, color 250ms ease;
-}
-.nav-cta:hover { background: linear-gradient(90deg, color-mix(in srgb, var(--color-accent, #6ab0ff) 85%, black 15%), color-mix(in srgb, var(--color-secondary, #161759) 85%, black 15%)); }
 
 @media (max-width: 860px) {
   .hamburger { display: block; }

@@ -10,6 +10,7 @@ import shugo from "../assets/shugo_icon.png";
 import DancingLogo from '../components/DancingLogo';
 import CharacterSection from '../components/CharacterSection';
 import AboutSection from '../components/AboutSection';
+import Reviews from '../components/Reviews';
 import ContactSection from '../components/ContactSection';
 import characters from '../components/CharactersData';
 
@@ -33,6 +34,7 @@ const Landing = () => {
             <BackgroundSlider images={[rhay, ramon, clean, shugo]} />
             <CharacterSection />
             <AboutSection />
+            <Reviews />
             <ContactSection />
         </div>
     );

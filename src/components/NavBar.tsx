@@ -33,7 +33,7 @@ const NavBar = () => {
 
             <ul id="primary-navigation" className={`nav-links ${open ? 'open' : ''}`}>
                 <li>
-                    <button className="nav-cta" onClick={() => { scrollTo(); window.open("https://drive.google.com/file/d/1cSDwtxD3N1H52UGJQZNoXB8hFx3Q9X6t/view?usp=sharing"); }}>Download</button>
+                    <button className="nav-link" onClick={() => { scrollTo(); window.open("https://drive.google.com/file/d/1cSDwtxD3N1H52UGJQZNoXB8hFx3Q9X6t/view?usp=sharing"); }}>Download</button>
                 </li>
                 <li>
                     <button className="nav-link" onClick={() => scrollTo('characters')}>Characters</button>

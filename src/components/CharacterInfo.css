@@ -103,7 +103,7 @@
     background: linear-gradient(var(--color-primary, #071126), color-mix(in srgb, var(--color-primary, #071126) 40%, black 10%));
     align-content: center;
     width: 40vw;
-    height: 45vh;
+    height: 55vh;
     border-radius: 10%;
     padding: 15px;
     top: 5%;
@@ -176,7 +176,7 @@
     }
 
     .description-container {
-        height: 40vh;
+        height: 45vh;
     }
 
     .name {
@@ -198,7 +198,7 @@
     }
 
     .description-container {
-        height: 30vh;
+        height: 35vh;
     }
 
     .name {
