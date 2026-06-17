@@ -12,6 +12,9 @@ const CharacterCarousel = ({ onClick }: Props) => {
                 <button 
                     key={char.name}
                     className="character"
+                    type="button"
+                    aria-label={`Select ${char.name}`}
+                    title={char.name}
                     onClick={() => onClick(index)}>
                         <img className="character-icon" src={char.icon}></img>
                 </button>
