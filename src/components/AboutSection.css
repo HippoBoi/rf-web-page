@@ -127,8 +127,12 @@
 .about-animate-delay-5 { transition-delay: 500ms; }
 
 .characters-landscape {
-  width: 64rem;
-  background-size: 1rem;
+  display: block;
+  width: min(100%, 64rem);
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  object-fit: contain;
 }
 
 @media (max-width: 860px) {
@@ -145,6 +149,10 @@
 @media (max-width: 560px) {
   .about-section {
     padding: 5rem 1rem;
+  }
+
+  .characters-landscape {
+    width: 100%;
   }
 
   .about-features {

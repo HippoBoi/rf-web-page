@@ -14,3 +14,15 @@
     transition: background 300ms ease;
     z-index: -1;
 }
+
+@media (max-width: 900px) {
+    .character-section-container {
+        height: clamp(560px, 82vh, 720px);
+    }
+}
+
+@media (max-width: 560px) {
+    .character-section-container {
+        height: clamp(100px, 54vh, 520px);
+    }
+}
