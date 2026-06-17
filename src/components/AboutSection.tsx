@@ -35,7 +35,7 @@ const AboutSection = () => {
           <h2 className="credits">art by: sunnysbmp</h2>
           <h2 className="about-subtitle">Random Fighters</h2>
           <p className="about-description">
-            is a MOBA inspired game made using the Godot Engine. This is an open source project made for fun (and for a few of my friends!). Feel free to use the assets found in this project in any way you like. Credits would be appreciated as well.
+            is a top-down fighting game made using the Godot Engine. This is an open source project made for fun (and for a few of my friends!). Feel free to use the assets found in this project in any way you like. Credits would be appreciated as well.
           </p>
         </div>
 
