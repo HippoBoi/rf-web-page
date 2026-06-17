@@ -34,7 +34,7 @@
 }
 
 .credits {
-  font-size: clamp(0.5rem, 1.0vw, 2.0rem);
+  font-size: clamp(0.85rem, 1.0vw, 2.0rem);
   font-weight: 500;
   letter-spacing: -0.065em;
   margin: 0.1rem 0 0.1rem 0;

@@ -176,7 +176,7 @@
     }
 
     .description-container {
-        height: 45vh;
+        display: none;
     }
 
     .name {

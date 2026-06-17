@@ -75,6 +75,12 @@
 
 @media (max-width: 750px) {
     .carousel {
+        width: 40vw;
+        left: auto;
+        right: 10%;
+        top: calc(10% + 105px);
+        bottom: auto;
+        justify-content: center;
         gap: 0.5em;
     }
 
