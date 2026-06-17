@@ -1,3 +1,51 @@
+@font-face {
+  font-family: 'Mussels';
+  src: url('./fonts/tl_mussels/TT Mussels Trial Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mussels';
+  src: url('./fonts/tl_mussels/TT Mussels Trial Medium.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mussels';
+  src: url('./fonts/tl_mussels/TT Mussels Trial Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mussels';
+  src: url('./fonts/tl_mussels/TT Mussels Trial DemiBold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mussels';
+  src: url('./fonts/tl_mussels/TT Mussels Trial Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mussels';
+  src: url('./fonts/tl_mussels/TT Mussels Trial ExtraBold.otf') format('opentype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
 @property --color-primary {
   syntax: '<color>';
   inherits: true;
@@ -62,7 +110,7 @@
     --clr1 600ms ease,
     --clr2 600ms ease,
     --clr3 600ms ease;
-  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Mussels', system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 

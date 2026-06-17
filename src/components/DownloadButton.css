@@ -5,6 +5,7 @@
   font-size: 1.25rem;
   font-weight: 700;
   font-family: inherit;
+  color: white;
   background: linear-gradient(90deg, #d66c79 0%, #8e2741 100%);
   cursor: pointer;
   transition: transform 0.15s ease, box-shadow 0.15s ease;

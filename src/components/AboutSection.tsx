@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import "./AboutSection.css";
+import charactersBg from "../assets/characters.webp"
 
 const AboutSection = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -29,7 +30,10 @@ const AboutSection = () => {
       <div className="about-inner">
 
         <div className="about-heading about-animate">
-          <h2 className="about-title">Random Fighters</h2>
+          <h1 className="about-title">What is Random Fighters?</h1>
+          <img className="characters-landscape" src={charactersBg}></img>
+          <h2 className="credits">art by: sunnysbmp</h2>
+          <h2 className="about-subtitle">Random Fighters</h2>
           <p className="about-description">
             is a MOBA inspired game made using the Godot Engine. This is an open source project made for fun (and for a few of my friends!). Feel free to use the assets found in this project in any way you like. Credits would be appreciated as well.
           </p>
