@@ -15,6 +15,14 @@
   background: linear-gradient(90deg, #bb4c59 0%, #6e1727 100%);
 }
 
+.download-button:disabled,
+.download-button:disabled:hover {
+  color: #e6d5d5;
+  background: #6b5e5e;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
 @media (max-width: 1000px) {
   .download-button {
     padding: 0.5em 0.9em;
